@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.7.3)
+  - CodableAlamofire (1.1.0):
+    - Alamofire (~> 4.0)
+  - FormulaAPI (1.0.0):
+    - Alamofire
+    - CodableAlamofire
+
+DEPENDENCIES:
+  - FormulaAPI (from `../FormulaAPI`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - CodableAlamofire
+
+EXTERNAL SOURCES:
+  FormulaAPI:
+    :path: "../FormulaAPI"
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  CodableAlamofire: e2d2edcec7cf413f7862c30c8fa98eded27a83f9
+  FormulaAPI: 437c9bb7db78194cbd4d04d185be621663182e59
+
+PODFILE CHECKSUM: d1dae7c9f2f2d9ccda185ec773a614478752b179
+
+COCOAPODS: 1.5.3
