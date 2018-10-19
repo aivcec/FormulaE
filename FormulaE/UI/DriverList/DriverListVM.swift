@@ -42,7 +42,7 @@ class DriverListVM: DriverListVMType {
         
         isFetching = true
         
-        FormulaAPI.fetchDrivers(type: .fe) { [weak self] response in
+        FormulaAPI.fetchDrivers(type: .fe, offset: cellData.count) { [weak self] response in
             self?.handleDriversResult(response.result, isInitial: false)
         }
     }
