@@ -1,21 +1,22 @@
 PODS:
   - Alamofire (4.7.3)
+  - AlamofireNetworkActivityIndicator (2.3.0):
+    - Alamofire (~> 4.7)
   - CodableAlamofire (1.1.0):
     - Alamofire (~> 4.0)
   - FormulaAPI (1.0.0):
     - Alamofire
     - CodableAlamofire
-    - SwiftyJSON
-  - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
+  - AlamofireNetworkActivityIndicator (~> 2.1)
   - FormulaAPI (from `../FormulaAPI`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - AlamofireNetworkActivityIndicator
     - CodableAlamofire
-    - SwiftyJSON
 
 EXTERNAL SOURCES:
   FormulaAPI:
@@ -23,10 +24,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireNetworkActivityIndicator: 18346ff6d770d9513d0ac6f2d99706f40f93dbaa
   CodableAlamofire: e2d2edcec7cf413f7862c30c8fa98eded27a83f9
-  FormulaAPI: 2fbadaa3d00f6236a214133e6902d3ddc4ce5078
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  FormulaAPI: 1a928a4fce4fb5f23e208438d4cf093f504b0acb
 
-PODFILE CHECKSUM: d1dae7c9f2f2d9ccda185ec773a614478752b179
+PODFILE CHECKSUM: ffe2c6c70332f2fee9f14f07f184618035c4c9a4
 
 COCOAPODS: 1.5.3

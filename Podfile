@@ -7,5 +7,6 @@ target 'FormulaE' do
 
   # Pods for FormulaE
   pod 'FormulaAPI', :path => '../FormulaAPI'
-  
+  pod 'AlamofireNetworkActivityIndicator', '~> 2.1'
+
 end
