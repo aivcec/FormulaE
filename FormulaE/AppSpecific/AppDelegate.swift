@@ -13,8 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var appCoordinator: Coordinator?
+    
+    let initializers: [Initializable] = [
+        AlamofireInitializer()
+    ]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        for initializer in initializers {
+            initializer.performInitialization()
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window!)

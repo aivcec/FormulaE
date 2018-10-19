@@ -27,6 +27,8 @@
 		03E86CFA2177C27B00389929 /* DriverListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E86CF92177C27B00389929 /* DriverListVM.swift */; };
 		03E86CFC2177C3A800389929 /* DriverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E86CFB2177C3A800389929 /* DriverCell.swift */; };
 		03E86CFE2177C76200389929 /* NSObject+className.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E86CFD2177C76200389929 /* NSObject+className.swift */; };
+		03F441192179DC3200804908 /* Initializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F441182179DC3200804908 /* Initializable.swift */; };
+		03F4411E2179DC6C00804908 /* AlamofireInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F4411D2179DC6C00804908 /* AlamofireInitializer.swift */; };
 		D81B9EB61E51C80C20C52CBB /* Pods_FormulaE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4586E168BD0E76FC454B639A /* Pods_FormulaE.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		03E86CF92177C27B00389929 /* DriverListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListVM.swift; sourceTree = "<group>"; };
 		03E86CFB2177C3A800389929 /* DriverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCell.swift; sourceTree = "<group>"; };
 		03E86CFD2177C76200389929 /* NSObject+className.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+className.swift"; sourceTree = "<group>"; };
+		03F441182179DC3200804908 /* Initializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initializable.swift; sourceTree = "<group>"; };
+		03F4411D2179DC6C00804908 /* AlamofireInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireInitializer.swift; sourceTree = "<group>"; };
 		08C1D1A5245BBFAC917097EB /* Pods-FormulaE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaE/Pods-FormulaE.debug.xcconfig"; sourceTree = "<group>"; };
 		0B0378A27EB1CA2CF4D1CC02 /* Pods-FormulaE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaE.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaE/Pods-FormulaE.release.xcconfig"; sourceTree = "<group>"; };
 		4586E168BD0E76FC454B639A /* Pods_FormulaE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormulaE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,7 @@
 				03AFCDCD217786EC0089D977 /* AppDelegate.swift */,
 				030D48052177BA84001B37BB /* BaseCoordinator.swift */,
 				030D48072177BABE001B37BB /* AppCoordinator.swift */,
+				03F4411C2179DC5700804908 /* Initializers */,
 			);
 			path = AppSpecific;
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				030D48032177BA55001B37BB /* Coordinator.swift */,
+				03F441182179DC3200804908 /* Initializable.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -194,6 +200,14 @@
 				03E86CFB2177C3A800389929 /* DriverCell.swift */,
 			);
 			path = DriverList;
+			sourceTree = "<group>";
+		};
+		03F4411C2179DC5700804908 /* Initializers */ = {
+			isa = PBXGroup;
+			children = (
+				03F4411D2179DC6C00804908 /* AlamofireInitializer.swift */,
+			);
+			path = Initializers;
 			sourceTree = "<group>";
 		};
 		BD7267B7EED5D0689A33B889 /* Pods */ = {
@@ -291,18 +305,18 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FormulaE/Pods-FormulaE-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FormulaAPI/FormulaAPI.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FormulaAPI.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,7 +363,9 @@
 				030D48082177BABE001B37BB /* AppCoordinator.swift in Sources */,
 				03E86CFA2177C27B00389929 /* DriverListVM.swift in Sources */,
 				03E86CEC2177BC5D00389929 /* LoginInterfaces.swift in Sources */,
+				03F441192179DC3200804908 /* Initializable.swift in Sources */,
 				0358773A2178A9E000FAA941 /* DriverDetailsVM.swift in Sources */,
+				03F4411E2179DC6C00804908 /* AlamofireInitializer.swift in Sources */,
 				035877362178A97D00FAA941 /* DriverDetailsVC.swift in Sources */,
 				030D48042177BA55001B37BB /* Coordinator.swift in Sources */,
 				030D48062177BA84001B37BB /* BaseCoordinator.swift in Sources */,
