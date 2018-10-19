@@ -16,7 +16,6 @@ protocol DriverListVMType {
 
 protocol DriverListVMViewDelegate: class {
     func reloadRequired()
-    func insertRequired()
 }
 
 

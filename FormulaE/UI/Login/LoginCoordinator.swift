@@ -14,6 +14,7 @@ class LoginCoordinator: BaseCoordinator {
         super.init(rootNC: rootNC)
         
         rootNC.isNavigationBarHidden = true
+        rootNC.delegate = self
     }
     
     override func start() {
@@ -32,12 +33,39 @@ class LoginCoordinator: BaseCoordinator {
     }
     
     func showDrivers() {
-        
-        let vm = DriverListVM(delegate: self)
-        let vc = DriverListVC(vm: vm)
-        rootNC.isNavigationBarHidden = false
+        let coordinator = DriversCoordinator(rootNC: self.rootNC)
+        addChildCoordinator(coordinator)
+        coordinator.start()
+    }
+}
 
-        rootNC.pushViewController(vc, animated: true)
+extension LoginCoordinator: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        // ensure the view controller is popping
+        guard
+            let fromVC = navigationController.transitionCoordinator?.viewController(forKey: .from),
+            !navigationController.viewControllers.contains(fromVC) else {
+                return
+        }
+        
+        if fromVC is DriverListVC {
+            rootNC.isNavigationBarHidden = true
+        }
+    }
+    
+    func navigationController(_ navigationController: UINavigationController,
+                              didShow viewController: UIViewController, animated: Bool) {
+        // ensure the view controller is popping
+        guard
+            let fromVC = navigationController.transitionCoordinator?.viewController(forKey: .from),
+            !navigationController.viewControllers.contains(fromVC) else {
+                return
+        }
+                
+        if fromVC is DriverListVC {
+            removeChildCoordinator { $0 is DriversCoordinator }
+        }
     }
 }
 
@@ -45,15 +73,5 @@ extension LoginCoordinator: LoginVMCoordinatorDelegate {
     
     func loginSuccess() {
         showDrivers()
-    }
-}
-
-extension LoginCoordinator: DriverListVMCoordinatorProtocol {
-    
-    func navigateToDriverDetails(name: String, id: String) {
-        let vm = DriverDetailsVM(name: name, id: id)
-        let vc = DriverDetailsVC(vm: vm)
-        
-        rootNC.pushViewController(vc, animated: true)
     }
 }

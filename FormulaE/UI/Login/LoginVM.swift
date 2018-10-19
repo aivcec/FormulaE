@@ -6,6 +6,8 @@
 //  Copyright © 2018 Antonio Ivcec. All rights reserved.
 //
 
+import FormulaAPI
+
 class LoginVM: LoginVMType {
     
     private weak var coordinatorDelegate: LoginVMCoordinatorDelegate?

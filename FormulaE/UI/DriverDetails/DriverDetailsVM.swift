@@ -7,16 +7,50 @@
 //
 
 import FormulaAPI
+import RxSwift
 
 class DriverDetailsVM: DriverDetailsVMType {
     
-    var name: String
-    private var id: String
+    weak var viewDelegate: DriverDetailsVMViewProtocol? {
+        didSet {
+            fetchDetails()
+        }
+    }
     
-    init(name: String, id: String) {
+    var name: String
+    var circuitData: [DriverDetailData] = [] {
+        didSet {
+            loadProgress += 0.5
+        }
+    }
+    var constructorData: [DriverDetailData] = [] {
+        didSet {
+            loadProgress += 0.5
+        }
+    }
+    
+    private var loadProgress: Float = 0 {
+        didSet {
+            viewDelegate?.updateLoadProgress(progress: loadProgress)
+        }
+    }
+    
+    private var id: String
+    private let service: DriverDetailsService
+    
+    init(name: String, id: String, service: DriverDetailsService) {
         self.name  = name
         self.id = id
+        self.service = service
+    }
+    
+    private func fetchDetails() {
+        service.fetchDriverCircuits(id: id) { circuits in
+            self.circuitData = circuits.map { DriverDetailData(detail: $0.circuitName) }
+        }
         
-        FormulaAPI.fetchDriverCircuits(driverId: id, type: .fe)
+        service.fetchDriverConstructors(id: id) { constructors in
+            self.constructorData = constructors.map { DriverDetailData(detail: "\($0.name) (\($0.nationality))") }
+        }
     }
 }

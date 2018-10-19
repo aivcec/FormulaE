@@ -7,6 +7,15 @@
 //
 
 protocol DriverDetailsVMType {
+    var viewDelegate: DriverDetailsVMViewProtocol? { get set }
+    
     var name: String { get }
+    var circuitData: [DriverDetailData] { get }
+    var constructorData: [DriverDetailData] { get }
+}
 
+
+protocol DriverDetailsVMViewProtocol: class {
+    func updateLoadProgress(progress: Float)
+    func requireReload()
 }

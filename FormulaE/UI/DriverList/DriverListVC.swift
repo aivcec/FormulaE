@@ -20,6 +20,7 @@ class DriverListVC: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.bounces = false
         
         return tableView
     }()
@@ -27,6 +28,8 @@ class DriverListVC: UIViewController {
     init(vm: DriverListVMType) {
         self.vm = vm
         super.init(nibName: nil, bundle: nil)
+        
+        title = "USERNAME"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -89,9 +92,5 @@ extension DriverListVC: DriverListVMViewDelegate {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-    }
-    
-    func insertRequired() {
-        
     }
 }

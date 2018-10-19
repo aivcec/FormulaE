@@ -7,6 +7,7 @@
 //
 
 import FormulaAPI
+import Alamofire
 
 class DriverListVM: DriverListVMType {
     
@@ -29,34 +30,47 @@ class DriverListVM: DriverListVMType {
     
     func initialFetch() {
         isFetching = true
-        FormulaAPI.fetchDrivers(type: .fe, pageSize: pageSize) { [weak self] drivers in
-            guard let sSelf = self else { return }
-            
-            sSelf.cellData = drivers.map { DriverCellData(id:$0.id, name: $0.givenName, birthDate: $0.dateOfBirth, nationality: $0.nationality) }
-            sSelf.viewDelegate?.reloadRequired()
-            sSelf.isFetching = false
+        FormulaAPI.fetchDrivers(type: .fe) { [weak self] response in
+            self?.handleDriversResult(response.result, isInitial: true)
         }
     }
     
     func fetchNewPage() {
-        
         if isFetching || (cellData.count % 10 != 0) {
             return
         }
-                
+        
         isFetching = true
-        FormulaAPI.fetchDrivers(type: .fe, pageSize: pageSize, offset: cellData.count) { [weak self] drivers in
-            guard let sSelf = self else { return }
-            
-            let cellData = drivers.map { DriverCellData(id:$0.id, name: $0.givenName, birthDate: $0.dateOfBirth, nationality: $0.nationality) }
-            sSelf.cellData.append(contentsOf: cellData)
-            sSelf.viewDelegate?.reloadRequired()
-            sSelf.isFetching = false
+        
+        FormulaAPI.fetchDrivers(type: .fe) { [weak self] response in
+            self?.handleDriversResult(response.result, isInitial: false)
         }
     }
     
     func driverTappedAt(_ row: Int) {
         let data = cellData[row]
         coordinatorDelegate?.navigateToDriverDetails(name: data.name, id: data.id)
+    }
+    
+    private func handleDriversResult(_ result: Result<[Driver]>, isInitial: Bool) {
+        switch result {
+        case .success(let drivers):
+            addDrivers(drivers, isInitial: isInitial)
+            viewDelegate?.reloadRequired()
+            isFetching = false
+        case .failure(let err):
+            print("Error occurred")
+        }
+    }
+    
+    private func addDrivers(_ drivers: [Driver], isInitial: Bool) {
+        let cellData = drivers.map { DriverCellData(id:$0.id, name: $0.givenName, birthDate: $0.dateOfBirth, nationality: $0.nationality) }
+        
+        if isInitial {
+            self.cellData = cellData
+        } else {
+            self.cellData.append(contentsOf: cellData)
+            
+        }
     }
 }

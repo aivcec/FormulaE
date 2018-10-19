@@ -37,6 +37,10 @@ class BaseCoordinator: NSObject, Coordinator {
         }
     }
     
+    func removeChildCoordinator(where predicate: (Coordinator) -> Bool) {
+        childCoordinators.removeAll { predicate($0) }
+    }
+    
     func removeAllChildCoordinators() {
         childCoordinators.removeAll()
     }
