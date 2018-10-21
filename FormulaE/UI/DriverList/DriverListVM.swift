@@ -19,13 +19,15 @@ class DriverListVM: DriverListVMType {
         }
     }
     
+    var title: String
     var cellData: [DriverCellData] = []
     
     var isFetching: Bool = false
     let pageSize: Int = 10
     
-    init(delegate: DriverListVMCoordinatorProtocol) {
+    init(delegate: DriverListVMCoordinatorProtocol, name: String) {
         self.coordinatorDelegate = delegate
+        self.title = "Hi, \(name)"
     }
     
     func initialFetch() {
@@ -49,7 +51,11 @@ class DriverListVM: DriverListVMType {
     
     func driverTappedAt(_ row: Int) {
         let data = cellData[row]
-        coordinatorDelegate?.navigateToDriverDetails(name: data.name, id: data.id)
+        coordinatorDelegate?.navigateTo(.details(name: data.name, id: data.id))
+    }
+    
+    func logoutTapped() {
+        coordinatorDelegate?.navigateTo(.login)
     }
     
     private func handleDriversResult(_ result: Result<[Driver]>, isInitial: Bool) {

@@ -29,7 +29,7 @@ class DriverListVC: UIViewController {
         self.vm = vm
         super.init(nibName: nil, bundle: nil)
         
-        title = "USERNAME"
+        title = vm.title
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,13 +40,23 @@ class DriverListVC: UIViewController {
         super.viewDidLoad()
         
         setupLayout()
+        setupNavBar()
         vm.viewDelegate = self
     }
     
-    func setupLayout() {
+    private func setupLayout() {
         view.addSubview(tableView)
         
         tableView.fillSuperviewSafeArea()
+    }
+    
+    private func setupNavBar() {
+        let button = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutTapped))
+        navigationItem.leftBarButtonItem = button
+    }
+    
+    @objc func logoutTapped() {
+        vm.logoutTapped()
     }
 }
 

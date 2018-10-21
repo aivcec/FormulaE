@@ -7,9 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol LoginVMType {
-    func loginPressed()
+    func loginPressed(from vc: UIViewController)
 }
 
 protocol LoginVMCoordinatorDelegate: class {

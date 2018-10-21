@@ -10,9 +10,11 @@ import UIKit
 
 class AppCoordinator: BaseCoordinator {
     let window: UIWindow?
+    let sessionInfo: SessionInfo
     
-    init(window: UIWindow?) {
+    init(window: UIWindow?, sessionInfo: SessionInfo) {
         self.window = window
+        self.sessionInfo = sessionInfo
         
         super.init(rootNC: UINavigationController())
     }
@@ -23,17 +25,33 @@ class AppCoordinator: BaseCoordinator {
         window.makeKeyAndVisible()
         window.rootViewController = rootNC
         
-        showLogin()
+        if sessionInfo.isActiveSession {
+            showDrivers()
+        } else {
+            showLogin()
+        }
     }
     
     func showLogin() {
         let coordinator = LoginCoordinator(rootNC: rootNC)
+        coordinator.onCoordinatorFinished = { [weak self] in
+            self?.showDrivers()
+            self?.removeChildCoordinator(coordinator)
+        }
         addChildCoordinator(coordinator)
-        
         coordinator.start()
     }
     
-    override func finish() {
-        
+    func showDrivers() {
+        let coordinator = DriversCoordinator(rootNC: self.rootNC, sessionInfo: sessionInfo)
+        coordinator.onCoordinatorFinished = { [weak self] in
+            guard let sSelf = self else { return }
+            
+            sSelf.sessionInfo.stopSession()
+            sSelf.showLogin()
+            sSelf.removeChildCoordinator(coordinator)
+        }
+        addChildCoordinator(coordinator)
+        coordinator.start()
     }
 }

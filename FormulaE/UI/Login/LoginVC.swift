@@ -70,6 +70,6 @@ class LoginVC: UIViewController {
     }
     
     @objc func loginTapped() {
-        vm.loginPressed()
+        vm.loginPressed(from: self)
     }
 }

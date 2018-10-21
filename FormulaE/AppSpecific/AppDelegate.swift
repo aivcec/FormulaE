@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FacebookOpener()
     ]
     
+    let sessionInfo: SessionInfo = SessionInfo()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         for initializer in initializers {
@@ -31,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        appCoordinator = AppCoordinator(window: window!)
+        appCoordinator = AppCoordinator(window: window!, sessionInfo: sessionInfo)
         appCoordinator?.start() 
         
         return true

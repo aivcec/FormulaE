@@ -6,12 +6,19 @@
 //  Copyright © 2018 Antonio Ivcec. All rights reserved.
 //
 
+enum DriverListNavigationOption {
+    case login, details(name: String, id: String)
+}
+
 protocol DriverListVMType {
     var viewDelegate: DriverListVMViewDelegate? { get set }
+    
+    var title: String { get }
     var cellData: [DriverCellData] { get }
     
     func fetchNewPage()
     func driverTappedAt(_ row: Int)
+    func logoutTapped()
 }
 
 protocol DriverListVMViewDelegate: class {
@@ -20,5 +27,5 @@ protocol DriverListVMViewDelegate: class {
 
 
 protocol DriverListVMCoordinatorProtocol: class {
-    func navigateToDriverDetails(name: String, id: String)
+    func navigateTo(_ option: DriverListNavigationOption)
 }
