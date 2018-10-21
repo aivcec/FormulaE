@@ -23,7 +23,7 @@ class LoadingView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 18)
-        label.textColor = .blue
+        label.textColor = Constants.Colors.mainTint
         label.textAlignment = NSTextAlignment.center
         label.text = "Loading..."
         
@@ -35,7 +35,7 @@ class LoadingView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         
         view.progress = 0
-        view.progressTintColor = .blue
+        view.progressTintColor = Constants.Colors.mainTint
         view.trackTintColor = .lightGray
         
         return view

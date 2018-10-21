@@ -25,11 +25,12 @@ class LoginVC: UIViewController {
     private lazy var loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        
-        button.setTitle("LOGIN", for: .normal)
+        let attrTitle = NSAttributedString(string: "FACEBOOK LOGIN",
+                                           attributes: [.font: UIFont.boldSystemFont(ofSize: 14), .foregroundColor : UIColor.white])
+        button.setAttributedTitle(attrTitle, for: .normal)
         button.layer.masksToBounds = true
         button.layer.cornerRadius = 10
-        button.backgroundColor = .green
+        button.backgroundColor = Constants.Colors.mainTint
         
         button.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         
