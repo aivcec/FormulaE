@@ -6,16 +6,14 @@
 //  Copyright © 2018 Antonio Ivcec. All rights reserved.
 //
 
-import UIKit
 import Alamofire
 import AlamofireNetworkActivityIndicator
 
 class AlamofireInitializer: Initializable {
-    
-    func performInitialization() {
+
+    func performInitialization(_ application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey : Any]?) {
         let networkActivityManager = NetworkActivityIndicatorManager.shared
         networkActivityManager.isEnabled = true
         networkActivityManager.startDelay = 0        
     }
-    
 }

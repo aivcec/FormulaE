@@ -6,6 +6,8 @@
 //  Copyright © 2018 Antonio Ivcec. All rights reserved.
 //
 
+import UIKit
+
 protocol Initializable {
-    func performInitialization()
+    func performInitialization(_ application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
 }
