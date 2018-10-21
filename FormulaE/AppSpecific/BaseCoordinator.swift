@@ -12,6 +12,7 @@ class BaseCoordinator: NSObject, Coordinator {
     
     let rootNC: UINavigationController
     private(set) var childCoordinators: [Coordinator] =  []
+    var onCoordinatorFinished: (() -> ())?
     
     init(rootNC: UINavigationController) {
         self.rootNC = rootNC
@@ -22,7 +23,7 @@ class BaseCoordinator: NSObject, Coordinator {
     }
     
     func finish() {
-        preconditionFailure("Method not implemented.")
+        onCoordinatorFinished?()
     }
     
     func addChildCoordinator(_ coordinator: Coordinator) {
