@@ -1,14 +1,18 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
 
-target 'FormulaE' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for FormulaE
+def app_pods
   pod 'FormulaAPI', :path => '../FormulaAPI'
   pod 'AlamofireNetworkActivityIndicator', '~> 2.1'
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'FacebookCore'	
+  pod 'FacebookLogin'
+end
+
+target 'FormulaE' do
+  use_frameworks!
+
+  # Pods for FormulaE
+  app_pods
 
 end
