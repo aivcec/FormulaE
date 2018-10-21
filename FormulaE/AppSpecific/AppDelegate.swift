@@ -15,13 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var appCoordinator: Coordinator?
     
     let initializers: [Initializable] = [
-        AlamofireInitializer()
+        AlamofireInitializer(),
+        FacebookInitializer()
     ]
 
+    let openers: [Opener] = [
+        FacebookOpener()
+    ]
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         for initializer in initializers {
-            initializer.performInitialization()
+            initializer.performInitialization(application, launchOptions: launchOptions)
         }
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -29,6 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator?.start() 
         
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let sourceAppKey = options[UIApplication.OpenURLOptionsKey.sourceApplication] as! String
+
+        for opener in openers {
+            if opener.sourceAppKey == sourceAppKey {
+                return opener.application(app, open: url, options: options)
+            }
+        }
+        
+        return false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

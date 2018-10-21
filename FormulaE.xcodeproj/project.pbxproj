@@ -10,6 +10,10 @@
 		030D48042177BA55001B37BB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D48032177BA55001B37BB /* Coordinator.swift */; };
 		030D48062177BA84001B37BB /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D48052177BA84001B37BB /* BaseCoordinator.swift */; };
 		030D48082177BABE001B37BB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D48072177BABE001B37BB /* AppCoordinator.swift */; };
+		033A1270217C7F5D006FA007 /* FacebookInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A126F217C7F5D006FA007 /* FacebookInitializer.swift */; };
+		033A1274217C8417006FA007 /* FacebookOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A1273217C8417006FA007 /* FacebookOpener.swift */; };
+		033A1276217C8525006FA007 /* Opener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A1275217C8525006FA007 /* Opener.swift */; };
+		033A1279217C85B7006FA007 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A1278217C85B7006FA007 /* LoginService.swift */; };
 		035877362178A97D00FAA941 /* DriverDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877352178A97D00FAA941 /* DriverDetailsVC.swift */; };
 		035877382178A99B00FAA941 /* DriverDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877372178A99B00FAA941 /* DriverDetailsInterfaces.swift */; };
 		0358773A2178A9E000FAA941 /* DriverDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877392178A9E000FAA941 /* DriverDetailsVM.swift */; };
@@ -34,13 +38,28 @@
 		03F44124217A383500804908 /* DriverDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44123217A383500804908 /* DriverDetailCell.swift */; };
 		03F44149217A63FD00804908 /* DriversCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F44148217A63FD00804908 /* DriversCoordinator.swift */; };
 		03F4414B217A704D00804908 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F4414A217A704D00804908 /* LoadingView.swift */; };
+		03F9FD95217B8A130048BB84 /* FormulaEUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F9FD94217B8A130048BB84 /* FormulaEUnitTests.swift */; };
 		D81B9EB61E51C80C20C52CBB /* Pods_FormulaE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4586E168BD0E76FC454B639A /* Pods_FormulaE.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03F9FD97217B8A130048BB84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03AFCDC2217786EC0089D977 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03AFCDC9217786EC0089D977;
+			remoteInfo = FormulaE;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		030D48032177BA55001B37BB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		030D48052177BA84001B37BB /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		030D48072177BABE001B37BB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		033A126F217C7F5D006FA007 /* FacebookInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookInitializer.swift; sourceTree = "<group>"; };
+		033A1273217C8417006FA007 /* FacebookOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookOpener.swift; sourceTree = "<group>"; };
+		033A1275217C8525006FA007 /* Opener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opener.swift; sourceTree = "<group>"; };
+		033A1278217C85B7006FA007 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		035877352178A97D00FAA941 /* DriverDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsVC.swift; sourceTree = "<group>"; };
 		035877372178A99B00FAA941 /* DriverDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsInterfaces.swift; sourceTree = "<group>"; };
 		035877392178A9E000FAA941 /* DriverDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsVM.swift; sourceTree = "<group>"; };
@@ -67,6 +86,9 @@
 		03F44123217A383500804908 /* DriverDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailCell.swift; sourceTree = "<group>"; };
 		03F44148217A63FD00804908 /* DriversCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversCoordinator.swift; sourceTree = "<group>"; };
 		03F4414A217A704D00804908 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		03F9FD92217B8A130048BB84 /* FormulaEUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormulaEUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F9FD94217B8A130048BB84 /* FormulaEUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaEUnitTests.swift; sourceTree = "<group>"; };
+		03F9FD96217B8A130048BB84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08C1D1A5245BBFAC917097EB /* Pods-FormulaE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaE/Pods-FormulaE.debug.xcconfig"; sourceTree = "<group>"; };
 		0B0378A27EB1CA2CF4D1CC02 /* Pods-FormulaE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormulaE.release.xcconfig"; path = "Pods/Target Support Files/Pods-FormulaE/Pods-FormulaE.release.xcconfig"; sourceTree = "<group>"; };
 		4586E168BD0E76FC454B639A /* Pods_FormulaE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormulaE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03F9FD8F217B8A130048BB84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +120,7 @@
 				030D48052177BA84001B37BB /* BaseCoordinator.swift */,
 				030D48072177BABE001B37BB /* AppCoordinator.swift */,
 				03F4411C2179DC5700804908 /* Initializers */,
+				033A1277217C854D006FA007 /* Openers */,
 			);
 			path = AppSpecific;
 			sourceTree = "<group>";
@@ -136,8 +166,17 @@
 			children = (
 				030D48032177BA55001B37BB /* Coordinator.swift */,
 				03F441182179DC3200804908 /* Initializable.swift */,
+				033A1275217C8525006FA007 /* Opener.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		033A1277217C854D006FA007 /* Openers */ = {
+			isa = PBXGroup;
+			children = (
+				033A1273217C8417006FA007 /* FacebookOpener.swift */,
+			);
+			path = Openers;
 			sourceTree = "<group>";
 		};
 		035877342178A96C00FAA941 /* DriverDetails */ = {
@@ -157,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				03AFCDCC217786EC0089D977 /* FormulaE */,
+				03F9FD93217B8A130048BB84 /* FormulaEUnitTests */,
 				03AFCDCB217786EC0089D977 /* Products */,
 				BD7267B7EED5D0689A33B889 /* Pods */,
 				E4EAECD163B4E48D746E1F12 /* Frameworks */,
@@ -167,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				03AFCDCA217786EC0089D977 /* FormulaE.app */,
+				03F9FD92217B8A130048BB84 /* FormulaEUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				03E266432179D1FC00966FE4 /* DriverDetailsService.swift */,
+				033A1278217C85B7006FA007 /* LoginService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -229,8 +271,18 @@
 			isa = PBXGroup;
 			children = (
 				03F4411D2179DC6C00804908 /* AlamofireInitializer.swift */,
+				033A126F217C7F5D006FA007 /* FacebookInitializer.swift */,
 			);
 			path = Initializers;
+			sourceTree = "<group>";
+		};
+		03F9FD93217B8A130048BB84 /* FormulaEUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				03F9FD94217B8A130048BB84 /* FormulaEUnitTests.swift */,
+				03F9FD96217B8A130048BB84 /* Info.plist */,
+			);
+			path = FormulaEUnitTests;
 			sourceTree = "<group>";
 		};
 		BD7267B7EED5D0689A33B889 /* Pods */ = {
@@ -272,6 +324,24 @@
 			productReference = 03AFCDCA217786EC0089D977 /* FormulaE.app */;
 			productType = "com.apple.product-type.application";
 		};
+		03F9FD91217B8A130048BB84 /* FormulaEUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03F9FD9B217B8A130048BB84 /* Build configuration list for PBXNativeTarget "FormulaEUnitTests" */;
+			buildPhases = (
+				03F9FD8E217B8A130048BB84 /* Sources */,
+				03F9FD8F217B8A130048BB84 /* Frameworks */,
+				03F9FD90217B8A130048BB84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03F9FD98217B8A130048BB84 /* PBXTargetDependency */,
+			);
+			name = FormulaEUnitTests;
+			productName = FormulaEUnitTests;
+			productReference = 03F9FD92217B8A130048BB84 /* FormulaEUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,6 +354,10 @@
 				TargetAttributes = {
 					03AFCDC9217786EC0089D977 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					03F9FD91217B8A130048BB84 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = 03AFCDC9217786EC0089D977;
 					};
 				};
 			};
@@ -301,6 +375,7 @@
 			projectRoot = "";
 			targets = (
 				03AFCDC9217786EC0089D977 /* FormulaE */,
+				03F9FD91217B8A130048BB84 /* FormulaEUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,6 +387,13 @@
 			files = (
 				03AFCDD8217786EE0089D977 /* LaunchScreen.storyboard in Resources */,
 				03AFCDD5217786EE0089D977 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03F9FD90217B8A130048BB84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +411,12 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FormulaE/Pods-FormulaE-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableAlamofire/CodableAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FormulaAPI/FormulaAPI.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -341,7 +428,12 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FormulaAPI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -383,11 +475,14 @@
 			files = (
 				03F44122217A363200804908 /* DriverDetailData.swift in Sources */,
 				03E86CE82177BC1E00389929 /* LoginCoordinator.swift in Sources */,
+				033A1279217C85B7006FA007 /* LoginService.swift in Sources */,
 				03E86CF82177C1FD00389929 /* DriverCellData.swift in Sources */,
 				03AFCDE02177877F0089D977 /* DriverListVC.swift in Sources */,
 				03E86CF62177C1B800389929 /* DriverListInterfaces.swift in Sources */,
 				03E86CEA2177BC3100389929 /* LoginVC.swift in Sources */,
+				033A1270217C7F5D006FA007 /* FacebookInitializer.swift in Sources */,
 				03AFCDCE217786EC0089D977 /* AppDelegate.swift in Sources */,
+				033A1276217C8525006FA007 /* Opener.swift in Sources */,
 				03E86CF12177BEEB00389929 /* LoginVM.swift in Sources */,
 				03E86CFC2177C3A800389929 /* DriverCell.swift in Sources */,
 				03F44124217A383500804908 /* DriverDetailCell.swift in Sources */,
@@ -399,6 +494,7 @@
 				03E266442179D1FC00966FE4 /* DriverDetailsService.swift in Sources */,
 				0358773A2178A9E000FAA941 /* DriverDetailsVM.swift in Sources */,
 				03F4411E2179DC6C00804908 /* AlamofireInitializer.swift in Sources */,
+				033A1274217C8417006FA007 /* FacebookOpener.swift in Sources */,
 				03F4414B217A704D00804908 /* LoadingView.swift in Sources */,
 				035877362178A97D00FAA941 /* DriverDetailsVC.swift in Sources */,
 				030D48042177BA55001B37BB /* Coordinator.swift in Sources */,
@@ -409,7 +505,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03F9FD8E217B8A130048BB84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F9FD95217B8A130048BB84 /* FormulaEUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03F9FD98217B8A130048BB84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03AFCDC9217786EC0089D977 /* FormulaE */;
+			targetProxy = 03F9FD97217B8A130048BB84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03AFCDD6217786EE0089D977 /* LaunchScreen.storyboard */ = {
@@ -577,6 +689,46 @@
 			};
 			name = Release;
 		};
+		03F9FD99217B8A130048BB84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46C6399N5N;
+				INFOPLIST_FILE = FormulaEUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aivcec.FormulaEUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormulaE.app/FormulaE";
+			};
+			name = Debug;
+		};
+		03F9FD9A217B8A130048BB84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 46C6399N5N;
+				INFOPLIST_FILE = FormulaEUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aivcec.FormulaEUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FormulaE.app/FormulaE";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -594,6 +746,15 @@
 			buildConfigurations = (
 				03AFCDDD217786EE0089D977 /* Debug */,
 				03AFCDDE217786EE0089D977 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03F9FD9B217B8A130048BB84 /* Build configuration list for PBXNativeTarget "FormulaEUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03F9FD99217B8A130048BB84 /* Debug */,
+				03F9FD9A217B8A130048BB84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
