@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let initializers: [Initializable] = [
         AlamofireInitializer(),
-        FacebookInitializer()
+        FacebookInitializer(),
+        ThemeInitializer()
     ]
 
     let openers: [Opener] = [

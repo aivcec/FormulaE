@@ -14,9 +14,13 @@
 		033A1274217C8417006FA007 /* FacebookOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A1273217C8417006FA007 /* FacebookOpener.swift */; };
 		033A1276217C8525006FA007 /* Opener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A1275217C8525006FA007 /* Opener.swift */; };
 		033A1279217C85B7006FA007 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A1278217C85B7006FA007 /* LoginService.swift */; };
+		033A127B217C8911006FA007 /* SessionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033A127A217C8911006FA007 /* SessionInfo.swift */; };
 		035877362178A97D00FAA941 /* DriverDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877352178A97D00FAA941 /* DriverDetailsVC.swift */; };
 		035877382178A99B00FAA941 /* DriverDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877372178A99B00FAA941 /* DriverDetailsInterfaces.swift */; };
 		0358773A2178A9E000FAA941 /* DriverDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877392178A9E000FAA941 /* DriverDetailsVM.swift */; };
+		039B03C0217CC6CC00DB0364 /* ThemeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03BF217CC6CC00DB0364 /* ThemeInitializer.swift */; };
+		039B03C2217CC77100DB0364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03C1217CC77100DB0364 /* Constants.swift */; };
+		039B03C4217CC7E700DB0364 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03C3217CC7E700DB0364 /* UIColor+extension.swift */; };
 		03AFCDCE217786EC0089D977 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFCDCD217786EC0089D977 /* AppDelegate.swift */; };
 		03AFCDD5217786EE0089D977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AFCDD4217786EE0089D977 /* Assets.xcassets */; };
 		03AFCDD8217786EE0089D977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AFCDD6217786EE0089D977 /* LaunchScreen.storyboard */; };
@@ -60,9 +64,13 @@
 		033A1273217C8417006FA007 /* FacebookOpener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookOpener.swift; sourceTree = "<group>"; };
 		033A1275217C8525006FA007 /* Opener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opener.swift; sourceTree = "<group>"; };
 		033A1278217C85B7006FA007 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		033A127A217C8911006FA007 /* SessionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionInfo.swift; sourceTree = "<group>"; };
 		035877352178A97D00FAA941 /* DriverDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsVC.swift; sourceTree = "<group>"; };
 		035877372178A99B00FAA941 /* DriverDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsInterfaces.swift; sourceTree = "<group>"; };
 		035877392178A9E000FAA941 /* DriverDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsVM.swift; sourceTree = "<group>"; };
+		039B03BF217CC6CC00DB0364 /* ThemeInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeInitializer.swift; sourceTree = "<group>"; };
+		039B03C1217CC77100DB0364 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		039B03C3217CC7E700DB0364 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
 		03AFCDCA217786EC0089D977 /* FormulaE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormulaE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AFCDCD217786EC0089D977 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AFCDD4217786EE0089D977 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,8 +127,10 @@
 				03AFCDCD217786EC0089D977 /* AppDelegate.swift */,
 				030D48052177BA84001B37BB /* BaseCoordinator.swift */,
 				030D48072177BABE001B37BB /* AppCoordinator.swift */,
+				033A127A217C8911006FA007 /* SessionInfo.swift */,
 				03F4411C2179DC5700804908 /* Initializers */,
 				033A1277217C854D006FA007 /* Openers */,
+				039B03C1217CC77100DB0364 /* Constants.swift */,
 			);
 			path = AppSpecific;
 			sourceTree = "<group>";
@@ -250,6 +260,7 @@
 			children = (
 				03E86CEE2177BD5800389929 /* UIView+anchors.swift */,
 				03E86CFD2177C76200389929 /* NSObject+className.swift */,
+				039B03C3217CC7E700DB0364 /* UIColor+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 			children = (
 				03F4411D2179DC6C00804908 /* AlamofireInitializer.swift */,
 				033A126F217C7F5D006FA007 /* FacebookInitializer.swift */,
+				039B03BF217CC6CC00DB0364 /* ThemeInitializer.swift */,
 			);
 			path = Initializers;
 			sourceTree = "<group>";
@@ -479,8 +491,11 @@
 				03E86CF82177C1FD00389929 /* DriverCellData.swift in Sources */,
 				03AFCDE02177877F0089D977 /* DriverListVC.swift in Sources */,
 				03E86CF62177C1B800389929 /* DriverListInterfaces.swift in Sources */,
+				039B03C0217CC6CC00DB0364 /* ThemeInitializer.swift in Sources */,
+				039B03C2217CC77100DB0364 /* Constants.swift in Sources */,
 				03E86CEA2177BC3100389929 /* LoginVC.swift in Sources */,
 				033A1270217C7F5D006FA007 /* FacebookInitializer.swift in Sources */,
+				033A127B217C8911006FA007 /* SessionInfo.swift in Sources */,
 				03AFCDCE217786EC0089D977 /* AppDelegate.swift in Sources */,
 				033A1276217C8525006FA007 /* Opener.swift in Sources */,
 				03E86CF12177BEEB00389929 /* LoginVM.swift in Sources */,
@@ -500,6 +515,7 @@
 				030D48042177BA55001B37BB /* Coordinator.swift in Sources */,
 				030D48062177BA84001B37BB /* BaseCoordinator.swift in Sources */,
 				03E86CFE2177C76200389929 /* NSObject+className.swift in Sources */,
+				039B03C4217CC7E700DB0364 /* UIColor+extension.swift in Sources */,
 				03E86CEF2177BD5800389929 /* UIView+anchors.swift in Sources */,
 				035877382178A99B00FAA941 /* DriverDetailsInterfaces.swift in Sources */,
 			);
