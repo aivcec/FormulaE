@@ -11,6 +11,8 @@ import Alamofire
 
 class DriverListVM: DriverListVMType {
     
+    // MARK: - Delegates
+    
     private weak var coordinatorDelegate: DriverListVMCoordinatorProtocol?
     
     weak var viewDelegate: DriverListVMViewDelegate? {
@@ -19,12 +21,16 @@ class DriverListVM: DriverListVMType {
         }
     }
     
+    // MARK: - Properties
+    
     private let service: DriversService
     var title: String
     var cellData: [DriverCellData] = []
     
     var isFetching: Bool = false
     let pageSize: Int = 10
+    
+    // MARK: - Init
     
     init(delegate: DriverListVMCoordinatorProtocol, service: DriversService, name: String) {
         self.service = service
@@ -61,6 +67,8 @@ class DriverListVM: DriverListVMType {
         coordinatorDelegate?.navigateTo(.login)
     }
     
+    // MARK: - Handlers
+    
     private func handleDriversResult(_ result: Result<[Driver]>, isInitial: Bool) {
         switch result {
         case .success(let drivers):
@@ -79,7 +87,6 @@ class DriverListVM: DriverListVMType {
             self.cellData = cellData
         } else {
             self.cellData.append(contentsOf: cellData)
-            
         }
     }
 }

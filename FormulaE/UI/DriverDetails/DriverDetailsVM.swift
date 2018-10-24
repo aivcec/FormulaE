@@ -11,6 +11,8 @@ import RxSwift
 
 class DriverDetailsVM: DriverDetailsVMType {
     
+    // MARK: - Properties
+    
     weak var viewDelegate: DriverDetailsVMViewProtocol? {
         didSet {
             fetchDetails()
@@ -37,6 +39,8 @@ class DriverDetailsVM: DriverDetailsVMType {
     
     private var id: String
     private let service: DriverDetailsService
+    
+    // MARK: - Init
     
     init(name: String, id: String, service: DriverDetailsService) {
         self.name  = name

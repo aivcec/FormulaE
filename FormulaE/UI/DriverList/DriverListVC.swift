@@ -10,7 +10,11 @@ import UIKit
 
 class DriverListVC: UIViewController {
     
+    // MARK: - Private properties
+    
     private var vm: DriverListVMType!
+    
+    // MARK: - Views
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -24,6 +28,8 @@ class DriverListVC: UIViewController {
         
         return tableView
     }()
+    
+    // MARK: - Setup
     
     init(vm: DriverListVMType) {
         self.vm = vm
@@ -55,10 +61,14 @@ class DriverListVC: UIViewController {
         navigationItem.leftBarButtonItem = button
     }
     
+    // MARK: - Handlers
+    
     @objc func logoutTapped() {
         vm.logoutTapped()
     }
 }
+
+// MARK: - TableView Delegate & DataSource
 
 extension DriverListVC: UITableViewDataSource, UITableViewDelegate {
     
@@ -95,6 +105,8 @@ extension DriverListVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
 }
+
+// MARK: - DriverListVMViewDelegate
 
 extension DriverListVC: DriverListVMViewDelegate {
     

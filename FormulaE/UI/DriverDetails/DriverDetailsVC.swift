@@ -10,7 +10,11 @@ import UIKit
 
 class DriverDetailsVC: UIViewController {
     
+    // MARK: - Private properties
+    
     private var vm: DriverDetailsVMType!
+    
+    // MARK: - Views
     
     private let loadingView: LoadingView = {
         let view = LoadingView()
@@ -31,6 +35,8 @@ class DriverDetailsVC: UIViewController {
         
         return tableView
     }()
+    
+    // MARK: - Setup
     
     init(vm: DriverDetailsVMType) {
         self.vm = vm
@@ -66,6 +72,8 @@ class DriverDetailsVC: UIViewController {
             ])
     }
 }
+
+// MARK: - TableView Delegate & DataSource
 
 extension DriverDetailsVC: UITableViewDelegate, UITableViewDataSource {
     
@@ -104,6 +112,8 @@ extension DriverDetailsVC: UITableViewDelegate, UITableViewDataSource {
         return DriverDetailCell.defaultHeight
     }
 }
+
+// MARK: - DriverDetailsVMViewProtocol
 
 extension DriverDetailsVC: DriverDetailsVMViewProtocol {
     

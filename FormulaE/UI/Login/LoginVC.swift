@@ -10,7 +10,11 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    // MARK: - Private properties
+    
     private var vm: LoginVMType!
+    
+    // MARK: - Views
     
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -36,6 +40,8 @@ class LoginVC: UIViewController {
         
         return button
     }()
+    
+    // MARK: - Setup
     
     init(vm: LoginVMType) {
         self.vm = vm
@@ -68,6 +74,8 @@ class LoginVC: UIViewController {
             loginButton.widthAnchor.constraint(equalToConstant: 200)
             ])
     }
+    
+    // MARK: Handlers
     
     @objc func loginTapped() {
         vm.loginPressed(from: self)

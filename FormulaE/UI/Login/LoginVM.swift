@@ -10,8 +10,12 @@ import UIKit
 
 class LoginVM: LoginVMType {
     
+    // MARK: - Private properties
+    
     private weak var coordinatorDelegate: LoginVMCoordinatorDelegate?
     private var service: LoginService
+    
+    // MARK: - Init
     
     init(delegate: LoginVMCoordinatorDelegate, service: LoginService) {
         coordinatorDelegate = delegate
