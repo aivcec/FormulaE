@@ -28,9 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        for initializer in initializers {
-            initializer.performInitialization(application, launchOptions: launchOptions)
-        }
+        initializers.forEach { $0.performInitialization(application, launchOptions: launchOptions) }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         appCoordinator = AppCoordinator(window: window!, sessionInfo: sessionInfo)
