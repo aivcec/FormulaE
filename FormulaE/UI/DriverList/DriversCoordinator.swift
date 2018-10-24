@@ -22,7 +22,8 @@ class DriversCoordinator: BaseCoordinator {
     }
     
     func showDriversList() {
-        let vm = DriverListVM(delegate: self, name: sessionInfo.name)
+        let service = DriversService()
+        let vm = DriverListVM(delegate: self, service: service, name: sessionInfo.name)
         let vc = DriverListVC(vm: vm)
         rootNC.isNavigationBarHidden = false        
         rootNC.setViewControllers([vc], animated: true)

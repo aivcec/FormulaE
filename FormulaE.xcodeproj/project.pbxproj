@@ -18,6 +18,7 @@
 		035877362178A97D00FAA941 /* DriverDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877352178A97D00FAA941 /* DriverDetailsVC.swift */; };
 		035877382178A99B00FAA941 /* DriverDetailsInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877372178A99B00FAA941 /* DriverDetailsInterfaces.swift */; };
 		0358773A2178A9E000FAA941 /* DriverDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035877392178A9E000FAA941 /* DriverDetailsVM.swift */; };
+		0390222C218108F30011C5A7 /* DriversService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0390222B218108F30011C5A7 /* DriversService.swift */; };
 		039B03C0217CC6CC00DB0364 /* ThemeInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03BF217CC6CC00DB0364 /* ThemeInitializer.swift */; };
 		039B03C2217CC77100DB0364 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03C1217CC77100DB0364 /* Constants.swift */; };
 		039B03C4217CC7E700DB0364 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039B03C3217CC7E700DB0364 /* UIColor+extension.swift */; };
@@ -68,6 +69,7 @@
 		035877352178A97D00FAA941 /* DriverDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsVC.swift; sourceTree = "<group>"; };
 		035877372178A99B00FAA941 /* DriverDetailsInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsInterfaces.swift; sourceTree = "<group>"; };
 		035877392178A9E000FAA941 /* DriverDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsVM.swift; sourceTree = "<group>"; };
+		0390222B218108F30011C5A7 /* DriversService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversService.swift; sourceTree = "<group>"; };
 		039B03BF217CC6CC00DB0364 /* ThemeInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeInitializer.swift; sourceTree = "<group>"; };
 		039B03C1217CC77100DB0364 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		039B03C3217CC7E700DB0364 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				03E266432179D1FC00966FE4 /* DriverDetailsService.swift */,
+				0390222B218108F30011C5A7 /* DriversService.swift */,
 				033A1278217C85B7006FA007 /* LoginService.swift */,
 			);
 			path = Services;
@@ -518,6 +521,7 @@
 				039B03C4217CC7E700DB0364 /* UIColor+extension.swift in Sources */,
 				03E86CEF2177BD5800389929 /* UIView+anchors.swift in Sources */,
 				035877382178A99B00FAA941 /* DriverDetailsInterfaces.swift in Sources */,
+				0390222C218108F30011C5A7 /* DriversService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

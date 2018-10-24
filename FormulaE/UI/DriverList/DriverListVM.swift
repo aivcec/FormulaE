@@ -19,21 +19,24 @@ class DriverListVM: DriverListVMType {
         }
     }
     
+    private let service: DriversService
     var title: String
     var cellData: [DriverCellData] = []
     
     var isFetching: Bool = false
     let pageSize: Int = 10
     
-    init(delegate: DriverListVMCoordinatorProtocol, name: String) {
+    init(delegate: DriverListVMCoordinatorProtocol, service: DriversService, name: String) {
+        self.service = service
         self.coordinatorDelegate = delegate
         self.title = "Hi, \(name)"
     }
     
     func initialFetch() {
         isFetching = true
-        FormulaAPI.fetchDrivers(type: .fe) { [weak self] response in
-            self?.handleDriversResult(response.result, isInitial: true)
+        service.fetchDrivers(offset: 0) { response in
+            self.handleDriversResult(response.result, isInitial: true)
+
         }
     }
     
@@ -44,8 +47,8 @@ class DriverListVM: DriverListVMType {
         
         isFetching = true
         
-        FormulaAPI.fetchDrivers(type: .fe, offset: cellData.count) { [weak self] response in
-            self?.handleDriversResult(response.result, isInitial: false)
+        service.fetchDrivers(offset: cellData.count) { response in
+            self.handleDriversResult(response.result, isInitial: false)
         }
     }
     
