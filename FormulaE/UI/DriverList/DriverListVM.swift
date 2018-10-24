@@ -64,8 +64,8 @@ class DriverListVM: DriverListVMType {
             addDrivers(drivers, isInitial: isInitial)
             viewDelegate?.reloadRequired()
             isFetching = false
-        case .failure(let err):
-            print("Error occurred")
+        case .failure(let error):
+            print(error.localizedDescription)
         }
     }
     
