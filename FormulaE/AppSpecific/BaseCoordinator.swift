@@ -46,3 +46,17 @@ class BaseCoordinator: NSObject, Coordinator {
         childCoordinators.removeAll()
     }
 }
+
+extension BaseCoordinator: VMCoordinatorDelegate {
+    
+    func showErrorAlert(with message: String?) {
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        showAlert(with: "Something went wrong", message: message, actions: [okAction])
+    }
+    
+    func showAlert(with title: String?, message: String?, actions: [UIAlertAction]) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        actions.forEach { alert.addAction($0) }
+        rootNC.present(alert, animated: true, completion: nil)
+    }
+}

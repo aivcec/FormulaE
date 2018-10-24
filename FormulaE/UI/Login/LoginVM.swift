@@ -20,7 +20,7 @@ class LoginVM: LoginVMType {
     
     func loginPressed(from vc: UIViewController) {
         service.peformLogin(from: vc, onSuccess: { self.coordinatorDelegate?.loginSuccess()}, onError: { error in
-            print("error")
+            self.coordinatorDelegate?.showErrorAlert(with: error)
         })
     }
 }

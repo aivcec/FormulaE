@@ -68,7 +68,7 @@ class DriverListVM: DriverListVMType {
             viewDelegate?.reloadRequired()
             isFetching = false
         case .failure(let error):
-            print(error.localizedDescription)
+            coordinatorDelegate?.showErrorAlert(with: error.localizedDescription)
         }
     }
     

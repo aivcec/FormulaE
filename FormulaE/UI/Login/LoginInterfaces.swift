@@ -13,6 +13,6 @@ protocol LoginVMType {
     func loginPressed(from vc: UIViewController)
 }
 
-protocol LoginVMCoordinatorDelegate: class {
+protocol LoginVMCoordinatorDelegate: VMCoordinatorDelegate {
     func loginSuccess()
 }

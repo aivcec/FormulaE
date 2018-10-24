@@ -26,6 +26,7 @@ protocol DriverListVMViewDelegate: class {
 }
 
 
-protocol DriverListVMCoordinatorProtocol: class {
+protocol DriverListVMCoordinatorProtocol: VMCoordinatorDelegate {
     func navigateTo(_ option: DriverListNavigationOption)
 }
+
