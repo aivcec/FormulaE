@@ -15,4 +15,9 @@ target 'FormulaE' do
   # Pods for FormulaE
   app_pods
 
+  target 'FormulaEUnitTests' do
+    inherit! :search_paths
+  end
+
+
 end
