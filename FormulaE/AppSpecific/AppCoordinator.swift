@@ -10,9 +10,9 @@ import UIKit
 
 class AppCoordinator: BaseCoordinator {
     let window: UIWindow?
-    let sessionInfo: SessionInfo
+    let sessionInfo: SessionInfoType
     
-    init(window: UIWindow?, sessionInfo: SessionInfo) {
+    init(window: UIWindow?, sessionInfo: SessionInfoType) {
         self.window = window
         self.sessionInfo = sessionInfo
         

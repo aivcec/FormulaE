@@ -10,9 +10,9 @@ import UIKit
 
 class DriversCoordinator: BaseCoordinator {
     
-    private let sessionInfo: SessionInfo
+    private let sessionInfo: SessionInfoType
     
-    init(rootNC: UINavigationController, sessionInfo: SessionInfo) {
+    init(rootNC: UINavigationController, sessionInfo: SessionInfoType) {
         self.sessionInfo = sessionInfo
         super.init(rootNC: rootNC)
     }

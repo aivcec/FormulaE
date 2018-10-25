@@ -26,6 +26,7 @@
 		03AFCDD5217786EE0089D977 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AFCDD4217786EE0089D977 /* Assets.xcassets */; };
 		03AFCDD8217786EE0089D977 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AFCDD6217786EE0089D977 /* LaunchScreen.storyboard */; };
 		03AFCDE02177877F0089D977 /* DriverListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AFCDDF2177877F0089D977 /* DriverListVC.swift */; };
+		03DA3A2D218271AE000A9AD9 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DA3A2C218271AE000A9AD9 /* AppCoordinatorTests.swift */; };
 		03E266442179D1FC00966FE4 /* DriverDetailsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E266432179D1FC00966FE4 /* DriverDetailsService.swift */; };
 		03E86CE82177BC1E00389929 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E86CE72177BC1E00389929 /* LoginCoordinator.swift */; };
 		03E86CEA2177BC3100389929 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E86CE92177BC3100389929 /* LoginVC.swift */; };
@@ -91,6 +92,7 @@
 		03AFCDD7217786EE0089D977 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03AFCDD9217786EE0089D977 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03AFCDDF2177877F0089D977 /* DriverListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListVC.swift; sourceTree = "<group>"; };
+		03DA3A2C218271AE000A9AD9 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
 		03E266432179D1FC00966FE4 /* DriverDetailsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverDetailsService.swift; sourceTree = "<group>"; };
 		03E86CE72177BC1E00389929 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		03E86CE92177BC3100389929 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -264,6 +266,14 @@
 			path = FormulaE;
 			sourceTree = "<group>";
 		};
+		03DA3A2B21827183000A9AD9 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				03DA3A2C218271AE000A9AD9 /* AppCoordinatorTests.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
 		03E266422179D1EC00966FE4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +364,7 @@
 		03F9FD93217B8A130048BB84 /* FormulaEUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				03DA3A2B21827183000A9AD9 /* Session */,
 				03ECE3EF2181BBF9003EA4AD /* DriverDetails */,
 				03ECE3EC2181BBAE003EA4AD /* DriverList */,
 				03ECE3E32181AFDF003EA4AD /* Login */,
@@ -629,6 +640,7 @@
 				03ECE3F92181D976003EA4AD /* DriverDetailsVCTests.swift in Sources */,
 				03ECE3F52181D540003EA4AD /* DriversCoordinatorTests.swift in Sources */,
 				03ECE3E22181A81D003EA4AD /* LoginVMTests.swift in Sources */,
+				03DA3A2D218271AE000A9AD9 /* AppCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

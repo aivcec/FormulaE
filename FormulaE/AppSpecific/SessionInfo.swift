@@ -9,7 +9,15 @@
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-struct SessionInfo {
+protocol SessionInfoType {
+    var isActiveSession: Bool { get }
+    var token: String? { get }
+    var name: String { get }
+    
+    func stopSession()
+}
+
+struct SessionInfo: SessionInfoType {
     
     var isActiveSession: Bool {
         get {
