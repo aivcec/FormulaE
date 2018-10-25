@@ -39,7 +39,7 @@ DEPENDENCIES:
   - AlamofireNetworkActivityIndicator (~> 2.1)
   - FacebookCore
   - FacebookLogin
-  - FormulaAPI (from `../FormulaAPI`)
+  - FormulaAPI (from `https://github.com/aivcec/FormulaAPI.git`)
   - RxCocoa (~> 4.0)
   - RxSwift (~> 4.0)
 
@@ -59,7 +59,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   FormulaAPI:
-    :path: "../FormulaAPI"
+    :git: https://github.com/aivcec/FormulaAPI.git
+
+CHECKOUT OPTIONS:
+  FormulaAPI:
+    :commit: e23376c1158527a479f68ddcb276c1c08bbac6c2
+    :git: https://github.com/aivcec/FormulaAPI.git
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -70,11 +75,11 @@ SPEC CHECKSUMS:
   FacebookLogin: ebcf34714a1cb9f0759d9f071cfb01ed500996cf
   FBSDKCoreKit: 2ab7fdbf600dc6b628ba7a49aa29d357a7b4c74e
   FBSDKLoginKit: 634fa27e72e33620eb6389253337342c03d4a407
-  FormulaAPI: ea405001ed449ee26a00229f04c8170b7e2e7b4c
+  FormulaAPI: 41a6699ba10b19b1e0221bce1e53ce5f03809201
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
 
-PODFILE CHECKSUM: c1bdf4a6993db9f4d9e4b903dfc093427eb1c8fb
+PODFILE CHECKSUM: a44a758f28c59bdc142cac11024733b7f9189748
 
 COCOAPODS: 1.5.3
