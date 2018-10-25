@@ -130,8 +130,4 @@ extension DriverDetailsVC: DriverDetailsVMViewProtocol {
             }
         }
     }
-    
-    func requireReload() {
-        
-    }
 }

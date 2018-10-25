@@ -38,11 +38,11 @@ class DriverDetailsVM: DriverDetailsVMType {
     }
     
     private var id: String
-    private let service: DriverDetailsService
+    private let service: DriverDetailsServiceProtocol
     
     // MARK: - Init
     
-    init(name: String, id: String, service: DriverDetailsService) {
+    init(name: String, id: String, service: DriverDetailsServiceProtocol) {
         self.name  = name
         self.id = id
         self.service = service

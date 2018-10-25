@@ -17,5 +17,4 @@ protocol DriverDetailsVMType {
 
 protocol DriverDetailsVMViewProtocol: class {
     func updateLoadProgress(progress: Float)
-    func requireReload()
 }

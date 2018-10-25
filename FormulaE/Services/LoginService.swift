@@ -8,8 +8,15 @@
 
 import FBSDKLoginKit
 
-class LoginService {
-    func peformLogin(from vc: UIViewController, onSuccess: @escaping () -> (), onError: @escaping (String) -> ()) {
+typealias EmpyCompletionBlock = () -> ()
+typealias StringCompletionBlock = (String) -> ()
+
+protocol LoginServiceProtocol {
+    func peformLogin(from vc: UIViewController, onSuccess: @escaping EmpyCompletionBlock, onError: @escaping StringCompletionBlock)
+}
+
+class LoginService: LoginServiceProtocol {
+    func peformLogin(from vc: UIViewController, onSuccess: @escaping EmpyCompletionBlock, onError: @escaping StringCompletionBlock) {
         let manager = FBSDKLoginManager()
         manager.logIn(withReadPermissions: ["public_profile", "email"], from: vc) { result, error in
             if let error = error {

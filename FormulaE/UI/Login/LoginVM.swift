@@ -13,11 +13,11 @@ class LoginVM: LoginVMType {
     // MARK: - Private properties
     
     private weak var coordinatorDelegate: LoginVMCoordinatorDelegate?
-    private var service: LoginService
+    private var service: LoginServiceProtocol
     
     // MARK: - Init
     
-    init(delegate: LoginVMCoordinatorDelegate, service: LoginService) {
+    init(delegate: LoginVMCoordinatorDelegate, service: LoginServiceProtocol) {
         coordinatorDelegate = delegate
         self.service = service
     }

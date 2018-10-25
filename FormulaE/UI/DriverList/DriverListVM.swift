@@ -23,7 +23,7 @@ class DriverListVM: DriverListVMType {
     
     // MARK: - Properties
     
-    private let service: DriversService
+    private let service: DriversServiceProtocol
     var title: String
     var cellData: [DriverCellData] = []
     
@@ -32,7 +32,7 @@ class DriverListVM: DriverListVMType {
     
     // MARK: - Init
     
-    init(delegate: DriverListVMCoordinatorProtocol, service: DriversService, name: String) {
+    init(delegate: DriverListVMCoordinatorProtocol, service: DriversServiceProtocol, name: String) {
         self.service = service
         self.coordinatorDelegate = delegate
         self.title = "Hi, \(name)"

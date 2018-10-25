@@ -8,7 +8,11 @@
 
 import FormulaAPI
 
-class DriversService {
+protocol DriversServiceProtocol {
+    func fetchDrivers(offset: Int, completion: @escaping DriversCompletionBlock)
+}
+
+class DriversService: DriversServiceProtocol {
     
     func fetchDrivers(offset: Int, completion: @escaping DriversCompletionBlock) {
         FormulaAPI.fetchDrivers(type: .fe, offset: offset, completion: completion)

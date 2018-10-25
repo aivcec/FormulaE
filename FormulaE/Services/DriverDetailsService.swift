@@ -9,7 +9,12 @@
 import RxSwift
 import FormulaAPI
 
-class DriverDetailsService {
+protocol DriverDetailsServiceProtocol {
+    func fetchDriverCircuits(id: String, completion: @escaping ([Circuit]) -> ())
+    func fetchDriverConstructors(id: String, completion: @escaping ([Constructor]) -> ())
+}
+
+class DriverDetailsService: DriverDetailsServiceProtocol {
     
     private let detailsQueue: String = "details.queue"
     private let bag = DisposeBag()

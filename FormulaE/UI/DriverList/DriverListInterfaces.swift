@@ -6,7 +6,7 @@
 //  Copyright © 2018 Antonio Ivcec. All rights reserved.
 //
 
-enum DriverListNavigationOption {
+enum DriverListNavigationOption: Equatable {
     case login, details(name: String, id: String)
 }
 
