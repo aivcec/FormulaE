@@ -81,7 +81,8 @@ class DriverListVM: DriverListVMType {
     }
     
     private func addDrivers(_ drivers: [Driver], isInitial: Bool) {
-        let cellData = drivers.map { DriverCellData(id:$0.id, name: $0.givenName, birthDate: $0.dateOfBirth, nationality: $0.nationality) }
+        let cellData = drivers.map {
+            DriverCellData(id:$0.id, name: "\($0.givenName!) \($0.familyName!)", birthDate: $0.dateOfBirth, nationality: $0.nationality) }
         
         if isInitial {
             self.cellData = cellData
