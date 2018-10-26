@@ -8,15 +8,15 @@
 
 import FBSDKLoginKit
 
-typealias EmpyCompletionBlock = () -> ()
+typealias EmptyCompletionBlock = () -> ()
 typealias StringCompletionBlock = (String) -> ()
 
 protocol LoginServiceProtocol {
-    func peformLogin(from vc: UIViewController, onSuccess: @escaping EmpyCompletionBlock, onError: @escaping StringCompletionBlock)
+    func peformLogin(from vc: UIViewController, onSuccess: @escaping EmptyCompletionBlock, onError: @escaping StringCompletionBlock)
 }
 
 class LoginService: LoginServiceProtocol {
-    func peformLogin(from vc: UIViewController, onSuccess: @escaping EmpyCompletionBlock, onError: @escaping StringCompletionBlock) {
+    func peformLogin(from vc: UIViewController, onSuccess: @escaping EmptyCompletionBlock, onError: @escaping StringCompletionBlock) {
         let manager = FBSDKLoginManager()
         manager.logIn(withReadPermissions: ["public_profile", "email"], from: vc) { result, error in
             if let error = error {
@@ -29,8 +29,6 @@ class LoginService: LoginServiceProtocol {
                     onSuccess()
                 })
                 
-            } else {
-                onError("Facebook login cancelled.")
             }
         }
     }
