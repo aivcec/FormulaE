@@ -26,6 +26,7 @@ class DriverDetailsVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
         tableView.isHidden = true
         
         tableView.register(DriverDetailCell.self, forCellReuseIdentifier: DriverDetailCell.className)
