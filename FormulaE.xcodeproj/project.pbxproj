@@ -221,14 +221,31 @@
 		035877342178A96C00FAA941 /* DriverDetails */ = {
 			isa = PBXGroup;
 			children = (
+				03A944E82183070B000AAB03 /* Cells */,
 				035877372178A99B00FAA941 /* DriverDetailsInterfaces.swift */,
 				035877352178A97D00FAA941 /* DriverDetailsVC.swift */,
 				035877392178A9E000FAA941 /* DriverDetailsVM.swift */,
-				03F44121217A363200804908 /* DriverDetailData.swift */,
-				03F44123217A383500804908 /* DriverDetailCell.swift */,
 				03F4414A217A704D00804908 /* LoadingView.swift */,
 			);
 			path = DriverDetails;
+			sourceTree = "<group>";
+		};
+		03A944E7218306FE000AAB03 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03E86CF72177C1FD00389929 /* DriverCellData.swift */,
+				03E86CFB2177C3A800389929 /* DriverCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		03A944E82183070B000AAB03 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03F44121217A363200804908 /* DriverDetailData.swift */,
+				03F44123217A383500804908 /* DriverDetailCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		03AFCDC1217786EC0089D977 = {
@@ -306,11 +323,10 @@
 		03E86CF42177C0E100389929 /* DriverList */ = {
 			isa = PBXGroup;
 			children = (
+				03A944E7218306FE000AAB03 /* Cells */,
 				03E86CF52177C1B800389929 /* DriverListInterfaces.swift */,
 				03AFCDDF2177877F0089D977 /* DriverListVC.swift */,
-				03E86CF72177C1FD00389929 /* DriverCellData.swift */,
 				03E86CF92177C27B00389929 /* DriverListVM.swift */,
-				03E86CFB2177C3A800389929 /* DriverCell.swift */,
 				03F44148217A63FD00804908 /* DriversCoordinator.swift */,
 			);
 			path = DriverList;
