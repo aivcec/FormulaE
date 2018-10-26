@@ -45,6 +45,8 @@ class DriverListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .lightGray
+
         setupLayout()
         setupNavBar()
         vm.viewDelegate = self
