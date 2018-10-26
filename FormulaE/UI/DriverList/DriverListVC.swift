@@ -19,6 +19,7 @@ class DriverListVC: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .clear
         
         tableView.register(DriverCell.self, forCellReuseIdentifier: DriverCell.className)
         
