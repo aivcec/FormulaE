@@ -9,43 +9,36 @@
 import UIKit
 @testable import FormulaE
 
-enum MockResult {
-    case none, success, failure
-}
-
 class MockLoginVMCoordinator: LoginVMCoordinatorDelegate {
     
-    var result: MockResult = .none
+    var didSucceed: Bool?
     
     func showErrorAlert(with message: String?) {
-        result = .failure
+        didSucceed = false
     }
     
     func loginSuccess() {
-        result = .success
+        didSucceed = true
     }
 }
 
 class MockLoginService: LoginServiceProtocol {
     
-    var result: MockResult = .none
+    var didSucceed: Bool?
     
-    private let resultOnCall: MockResult
+    private let shouldSucceed: Bool
     
-    init(resultOnCall: MockResult) {
-        self.resultOnCall = resultOnCall
+    init(shouldSucceed: Bool) {
+        self.shouldSucceed = shouldSucceed
     }
     
     func peformLogin(from vc: UIViewController, onSuccess: @escaping () -> (), onError: @escaping (String) -> ()) {
-        switch self.resultOnCall {
-        case .success:
+        if shouldSucceed {
             onSuccess()
-            result = .success
-        case.failure:
+            didSucceed = true
+        } else {
             onError("Error")
-            result = .failure
-        default:
-            fatalError("Test error")
+            didSucceed = false
         }
     }
 }

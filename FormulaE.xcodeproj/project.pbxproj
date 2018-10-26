@@ -42,7 +42,6 @@
 		03ECE3E52181AFED003EA4AD /* LoginMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECE3E42181AFED003EA4AD /* LoginMock.swift */; };
 		03ECE3E72181B1CE003EA4AD /* LoginVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECE3E62181B1CE003EA4AD /* LoginVCTests.swift */; };
 		03ECE3E92181B949003EA4AD /* LoginCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECE3E82181B949003EA4AD /* LoginCoordinatorTests.swift */; };
-		03ECE3EB2181BA5E003EA4AD /* LoginServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECE3EA2181BA5E003EA4AD /* LoginServiceTests.swift */; };
 		03ECE3EE2181BBD0003EA4AD /* DriverListVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECE3ED2181BBD0003EA4AD /* DriverListVMTests.swift */; };
 		03ECE3F12181CF88003EA4AD /* DriverListVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECE3F02181CF88003EA4AD /* DriverListVCTests.swift */; };
 		03ECE3F52181D540003EA4AD /* DriversCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03ECE3F42181D540003EA4AD /* DriversCoordinatorTests.swift */; };
@@ -108,7 +107,6 @@
 		03ECE3E42181AFED003EA4AD /* LoginMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMock.swift; sourceTree = "<group>"; };
 		03ECE3E62181B1CE003EA4AD /* LoginVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVCTests.swift; sourceTree = "<group>"; };
 		03ECE3E82181B949003EA4AD /* LoginCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorTests.swift; sourceTree = "<group>"; };
-		03ECE3EA2181BA5E003EA4AD /* LoginServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
 		03ECE3ED2181BBD0003EA4AD /* DriverListVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListVMTests.swift; sourceTree = "<group>"; };
 		03ECE3F02181CF88003EA4AD /* DriverListVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverListVCTests.swift; sourceTree = "<group>"; };
 		03ECE3F42181D540003EA4AD /* DriversCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -325,7 +323,6 @@
 				03ECE3E12181A81D003EA4AD /* LoginVMTests.swift */,
 				03ECE3E62181B1CE003EA4AD /* LoginVCTests.swift */,
 				03ECE3E82181B949003EA4AD /* LoginCoordinatorTests.swift */,
-				03ECE3EA2181BA5E003EA4AD /* LoginServiceTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -634,7 +631,6 @@
 				03ECE3EE2181BBD0003EA4AD /* DriverListVMTests.swift in Sources */,
 				03ECE3F72181D613003EA4AD /* DriverDetailsVMTests.swift in Sources */,
 				03ECE3F12181CF88003EA4AD /* DriverListVCTests.swift in Sources */,
-				03ECE3EB2181BA5E003EA4AD /* LoginServiceTests.swift in Sources */,
 				03ECE3E72181B1CE003EA4AD /* LoginVCTests.swift in Sources */,
 				03ECE3FB2181E0A2003EA4AD /* DriversServiceTests.swift in Sources */,
 				03ECE3F92181D976003EA4AD /* DriverDetailsVCTests.swift in Sources */,

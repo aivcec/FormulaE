@@ -14,26 +14,26 @@ class LoginTests: XCTestCase {
     func testSuccessfulLoginFlow() {
         
         let mockCoordinator = MockLoginVMCoordinator()
-        let mockService = MockLoginService(resultOnCall: .success)
+        let mockService = MockLoginService(shouldSucceed: true)
         let mockVC = UIViewController()
         
         let vm = LoginVM(delegate: mockCoordinator, service: mockService)
         vm.loginPressed(from: mockVC)
         
-        XCTAssertEqual(mockService.result, .success)
-        XCTAssertEqual(mockCoordinator.result, .success)
+        XCTAssertEqual(mockService.didSucceed, true)
+        XCTAssertEqual(mockCoordinator.didSucceed, true)
     }
     
     func testFailedLoginFlow() {
         
         let mockCoordinator = MockLoginVMCoordinator()
-        let mockService = MockLoginService(resultOnCall: .failure)
+        let mockService = MockLoginService(shouldSucceed: false)
         let mockVC = UIViewController()
         
         let vm = LoginVM(delegate: mockCoordinator, service: mockService)
         vm.loginPressed(from: mockVC)
         
-        XCTAssertEqual(mockService.result, .failure)
-        XCTAssertEqual(mockCoordinator.result, .failure)
+        XCTAssertEqual(mockService.didSucceed, false)
+        XCTAssertEqual(mockCoordinator.didSucceed, false)
     }
 }
